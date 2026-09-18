@@ -29,10 +29,36 @@
   --color-foreground: var(--foreground);
 }
 
+html, body {
+  background: transparent;
+}
+
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+/* Fixed-position background layer (not background-attachment:fixed, which is
+   janky/expensive to repaint on mobile browsers while scrolling). A small
+   image is used by default for phones; a larger one swaps in on wider
+   screens. The cream overlay keeps the existing color scheme readable on
+   top of the busy illustration. */
+.app-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgba(246, 243, 236, 0.88), rgba(246, 243, 236, 0.88)),
+    url("/images/background-mobile.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .app-bg {
+    background-image: linear-gradient(rgba(246, 243, 236, 0.85), rgba(246, 243, 236, 0.85)),
+      url("/images/background.jpg");
+  }
 }
 
 .q-figure svg { max-width: 100%; height: auto; overflow: visible; }

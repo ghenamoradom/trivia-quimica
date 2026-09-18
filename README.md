@@ -123,15 +123,25 @@ git push -u origin main
 ## Cómo funciona el juego (resumen)
 
 - **Nivel 1** — "The Matter and the Molecule of the Month Project": 10
-  preguntas, 10 minutos, 1 pt/pregunta normal, 3 pts la de inglés, 2 pts la
+  preguntas, 6 minutos, 1 pt/pregunta normal, 3 pts la de inglés, 2 pts la
   de MoM (14 pts en juego) + 1 pt bono por las 10 correctas. Música:
   `level1.mp3`.
 - **Nivel 2** — "The Molecule of the Month and the Chemistry Universe": 10
-  preguntas, 8.5 minutos, 2 pts/pregunta normal, 5 pts inglés, 3 pts MoM (28
+  preguntas, 5 minutos, 2 pts/pregunta normal, 5 pts inglés, 3 pts MoM (28
   pts en juego) + 2 pts bono. Música: `level2.mp3`.
-- **Nivel 3** — "30 Years of Molecules": 10 preguntas, 7 minutos, 3
+- **Nivel 3** — "30 Years of Molecules": 10 preguntas, 3 minutos, 3
   pts/pregunta normal, 5 pts inglés, 3 pts MoM + 4 pts bono. Música:
   `level3.mp3`.
+
+Después de registrarse, el estudiante ve una página de reglas (`/reglas`)
+que explica los niveles, los tipos de pregunta, el ranking, que el tiempo
+sigue corriendo aunque cierre el navegador, y el premio para el ganador
+(tarjeta de regalo precargada), antes de darle a "Iniciar trivia".
+
+Las preguntas en inglés muestran la imagen de English Day, y las preguntas
+Molecule of the Month muestran su propia imagen junto con una pista para
+buscar la estructura en las carteleras del salón — los tres archivos de
+imagen viven en `public/images/`.
 
 Las preguntas y el orden de las opciones se generan de forma aleatoria e
 independiente para cada estudiante (para evitar copia), tomadas del banco de

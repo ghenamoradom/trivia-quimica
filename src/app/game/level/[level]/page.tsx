@@ -32,9 +32,9 @@ type LeaderRow = {
 };
 
 const LEVEL_META: Record<number, { name: string; soundtrack: string; soundtrackLabel: string; timeLabel: string }> = {
-  1: { name: "The Matter and the Molecule of the Month Project", soundtrack: "/audio/level1.mp3", soundtrackLabel: "Mario Bros. – Underground", timeLabel: "10:00" },
-  2: { name: "The Molecule of the Month and the Chemistry Universe", soundtrack: "/audio/level2.mp3", soundtrackLabel: "Top Gear Soundtrack – Track 1", timeLabel: "8:30" },
-  3: { name: "30 Years of Molecules", soundtrack: "/audio/level3.mp3", soundtrackLabel: "Donkey Kong Country – Aquatic Ambience", timeLabel: "7:00" },
+  1: { name: "The Matter and the Molecule of the Month Project", soundtrack: "/audio/level1.mp3", soundtrackLabel: "Mario Bros. – Underground", timeLabel: "6:00" },
+  2: { name: "The Molecule of the Month and the Chemistry Universe", soundtrack: "/audio/level2.mp3", soundtrackLabel: "Top Gear Soundtrack – Track 1", timeLabel: "5:00" },
+  3: { name: "30 Years of Molecules", soundtrack: "/audio/level3.mp3", soundtrackLabel: "Donkey Kong Country – Aquatic Ambience", timeLabel: "3:00" },
 };
 
 function fmtCountdown(ms: number) {
@@ -288,6 +288,29 @@ export default function LevelPage({ params }: { params: Promise<{ level: string 
         {q && (
           <div className="bg-white border border-[#DAD3C4] rounded-2xl p-5 md:p-8 min-h-[380px] flex flex-col gap-5">
             {q.momMonth && <div className="text-xs font-bold text-[#2F6E5C]">Molecule of the Month · {q.momMonth}</div>}
+            {q.type === "MOM" && (
+              <div className="flex flex-col items-center gap-2">
+                <img
+                  src="/images/mom-trivia.jpg"
+                  alt="Molecule of the Month Trivia"
+                  loading="lazy"
+                  className="w-full max-w-[200px] rounded-xl shadow-sm object-contain"
+                />
+                <p className="text-xs text-center text-[#6e5a1e] bg-[#FBF0DD] border border-[#EAD9A0] rounded-lg px-3 py-2 max-w-md">
+                  💡 Pista: busca la estructura de esta molécula en las carteleras de la pared del salón.
+                </p>
+              </div>
+            )}
+            {q.type === "EN" && (
+              <div className="flex justify-center">
+                <img
+                  src="/images/english-day.jpg"
+                  alt="English Day Juan XXIII"
+                  loading="lazy"
+                  className="w-full max-w-[200px] rounded-xl shadow-sm object-contain"
+                />
+              </div>
+            )}
             {q.img && <div className="q-figure flex justify-center" dangerouslySetInnerHTML={{ __html: q.img }} />}
             {q.table && <div dangerouslySetInnerHTML={{ __html: q.table }} />}
             <p className="text-xl font-semibold leading-snug">{q.prompt}</p>

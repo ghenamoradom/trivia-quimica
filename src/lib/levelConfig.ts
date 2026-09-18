@@ -20,7 +20,7 @@ export const LEVELS: Record<1 | 2 | 3, LevelConfig> = {
   1: {
     level: 1,
     name: "The Matter and the Molecule of the Month Project",
-    timeLimitMs: 10 * 60 * 1000,
+    timeLimitMs: 6 * 60 * 1000,
     weightNormal: 1,
     weightEnglish: 3,
     weightMom: 2,
@@ -35,7 +35,7 @@ export const LEVELS: Record<1 | 2 | 3, LevelConfig> = {
   2: {
     level: 2,
     name: "The Molecule of the Month and the Chemistry Universe",
-    timeLimitMs: 8.5 * 60 * 1000,
+    timeLimitMs: 5 * 60 * 1000,
     weightNormal: 2,
     weightEnglish: 5,
     weightMom: 3,
@@ -50,7 +50,7 @@ export const LEVELS: Record<1 | 2 | 3, LevelConfig> = {
   3: {
     level: 3,
     name: "30 Years of Molecules",
-    timeLimitMs: 7 * 60 * 1000,
+    timeLimitMs: 3 * 60 * 1000,
     weightNormal: 3,
     weightEnglish: 5,
     weightMom: 3,

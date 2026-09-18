@@ -18,6 +18,8 @@ def register_student(page, course="9-2"):
     page.check("#reg-sex-f")
     page.fill("#reg-doc", doc_id)
     page.click("#register-submit")
+    page.wait_for_url("**/reglas", timeout=10000)
+    page.click("text=Iniciar trivia")
     page.wait_for_url("**/game/level/1", timeout=10000)
     return doc_id
 

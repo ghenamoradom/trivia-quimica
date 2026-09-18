@@ -67,8 +67,15 @@ export default function HomePage() {
     }
     const levels: { level: number; status: string }[] = me.levels;
     const next = levels.find((l) => l.status === "not_started" || l.status === "in_progress");
-    if (next) router.push(`/game/level/${next.level}`);
-    else router.push("/resultados");
+    if (next) {
+      if (next.level === 1 && next.status === "not_started") {
+        router.push("/reglas");
+      } else {
+        router.push(`/game/level/${next.level}`);
+      }
+      return;
+    }
+    router.push("/resultados");
   }
 
   async function handleLogin(e: React.FormEvent) {
