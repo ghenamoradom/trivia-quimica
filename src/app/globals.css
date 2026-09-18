@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f6f3ec;
+  --foreground: #1e2422;
+  --surface: #ffffff;
+  --ink: #1e2422;
+
+  --topic-atomos: #6e4fa0;      --topic-atomos-bg: #f1ebfa;
+  --topic-materia: #2f6e5c;     --topic-materia-bg: #e4f1ea;
+  --topic-estados: #2a6fa8;     --topic-estados-bg: #e7f1fa;
+  --topic-clasif: #b7791f;      --topic-clasif-bg: #fbf0dd;
+  --topic-mezclas: #c24b3f;     --topic-mezclas-bg: #fbe9e6;
+  --topic-separacion: #8a5a34;  --topic-separacion-bg: #f3e8dc;
+  --topic-soluciones: #1e8a96;  --topic-soluciones-bg: #dff3f5;
+  --topic-gases: #5a62c2;       --topic-gases-bg: #e9ebfa;
+  --topic-tabla: #b23a73;       --topic-tabla-bg: #fbe3ee;
+  --topic-enlaces: #4c7a2a;     --topic-enlaces-bg: #eaf3de;
+  --topic-config: #4a4fb0;      --topic-config-bg: #e7e8fa;
+  --topic-reacciones: #c1600f;  --topic-reacciones-bg: #fbe8d6;
+  --topic-equilibrio: #4a6fa5;  --topic-equilibrio-bg: #e5ecf6;
+  --topic-cinetica: #a73e7c;    --topic-cinetica-bg: #f7e3ef;
+  --topic-modelos: #6e6b1e;     --topic-modelos-bg: #efefd8;
+  --topic-organica: #178572;    --topic-organica-bg: #dbf2ec;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
 }
+
+.q-figure svg { max-width: 100%; height: auto; overflow: visible; }
+.q-table-wrap { overflow-x: auto; }
+table.q-table { border-collapse: collapse; font-size: .85rem; margin: 0 auto; }
+table.q-table th, table.q-table td { border: 1px solid #DAD3C4; padding: 6px 12px; text-align: center; }
+table.q-table th { background: #EFEAE0; font-weight: 700; }

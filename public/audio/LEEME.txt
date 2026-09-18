@@ -1,0 +1,11 @@
+Coloca aquí tus propios archivos de audio (de copias que ya poseas legalmente) con estos nombres EXACTOS:
+
+  level1.mp3   -> música del Nivel 1 (sugerido: Mario Bros. - Underground)
+  level2.mp3   -> música del Nivel 2 (sugerido: Top Gear Soundtrack - Track 1)
+  level3.mp3   -> música del Nivel 3 (sugerido: Donkey Kong Country - Aquatic Ambience)
+
+No fue posible incluir estas pistas en el proyecto porque son grabaciones con derechos de autor
+de Nintendo / la BBC, y no pueden generarse ni distribuirse aquí.
+
+Si no agregas los archivos, el juego funciona igual mostrando el botón de música, simplemente
+no habrá sonido de fondo hasta que agregues los MP3 con estos nombres.
